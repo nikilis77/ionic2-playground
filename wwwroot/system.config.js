@@ -43,7 +43,7 @@
             defaultExtension: "js"
         },
         "ionic-angular": {
-            main: "commonjs/index.js",
+            main: "umd/index.js",
             defaultExtension: "js"
         },
         '@angular/core' : {main: 'bundles/core.umd.min.js'},
