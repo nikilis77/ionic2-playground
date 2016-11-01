@@ -6,6 +6,7 @@ import { TabsPage } from "./pages/tabs/tabs";
 import { HomePage } from "./pages/home/home";
 import { AboutPage } from "./pages/about/about";
 import { ContactPage } from "./pages/contact/contact";
+import { WhiteScreenPage } from "./pages/white-screen/white-screen";
 import { deepLinkConfig } from "./shared/route.config";
 import { MyApp } from "./app";
 
@@ -15,7 +16,8 @@ import { MyApp } from "./app";
 		TabsPage,
 		HomePage,
 		ContactPage,
-		AboutPage
+		AboutPage,
+		WhiteScreenPage
 	],
 	imports: [
 		IonicModule.forRoot(MyApp, null, deepLinkConfig)
@@ -27,7 +29,8 @@ import { MyApp } from "./app";
 		TabsPage,
 		HomePage,
 		ContactPage,
-		AboutPage
+		AboutPage,
+		WhiteScreenPage
 	],
 	providers: [
 		{ provide: LocationStrategy, useClass: PathLocationStrategy }

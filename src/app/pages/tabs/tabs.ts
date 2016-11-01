@@ -12,9 +12,8 @@ import { RouterService } from "../../shared/index";
 })
 export class TabsPage implements OnInit, OnDestroy {
 	@ViewChild("tabs") tabsCtrl: Tabs;
-	private tab1Root: any;
-	private tab2Root: any;
-	private tab3Root: any;
+
+	tabIndex = 0;
 
 	tabs = [
 		HomePage,
@@ -22,7 +21,9 @@ export class TabsPage implements OnInit, OnDestroy {
 		ContactPage
 	];
 
-	tabIndex = 0;
+	private tab1Root: any;
+	private tab2Root: any;
+	private tab3Root: any;
 
 	constructor(
 		private cdr: ChangeDetectorRef,
@@ -39,7 +40,7 @@ export class TabsPage implements OnInit, OnDestroy {
 		console.log(`[tabs::ngOnInit]`);
 		this.routerService.activeRoute$
 			.distinctUntilChanged()
-			.filter(x => !!x)
+			.filter((x: any) => !!x)
 			.map(route => {
 				return this.tabs.indexOf(route.component);
 			})
@@ -55,7 +56,7 @@ export class TabsPage implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
-
+		//
 	}
 
 }
