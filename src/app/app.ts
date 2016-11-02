@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
 import { Nav } from "ionic-angular";
 
 import { HomePage } from "./pages/home/home";
@@ -9,26 +9,15 @@ import { WhiteScreenPage } from "./pages/white-screen/white-screen";
 	moduleId: module.id,
 	templateUrl: "app.html"
 })
-export class MyApp implements OnInit{
+export class MyApp {
 
-	@ViewChild("myNav")nav: Nav;
+	@ViewChild("mycontent")nav: Nav;
 
-	rootPage: any;
+	rootPage = HomePage;
 	contactPage = ContactPage;
 	whiteScreenPage = WhiteScreenPage;
-
-	ngOnInit() {
-		this.nav.setRoot(HomePage);
-	}
 
 	gotoPage(page: any) {
 		this.nav.setRoot(page, null, { animate: true, direction: "forward" });
 	}
 }
-
-
-
-
-
-
-

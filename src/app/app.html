@@ -1,14 +1,25 @@
-<h1>Layout</h1>
-<ul>
-	<li>
-		<button (click)="gotoPage(contactPage)">About</button>
-	</li>
-	<li>
-		<button (click)="gotoPage(whiteScreenPage)">Replicate White Screen Issue</button>
-	</li>
-	<li>
-		<button (click)="gotoPage(whiteScreenPage)">Replicate White Screen Issue</button>
-	</li>
-</ul>
+<ion-header>
 
-<ion-nav #myNav [root]="rootPage"></ion-nav>
+	<ion-navbar>
+		<button ion-button [menuToggle]="activeMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>
+			Menu
+		</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-menu side="left" [content]="mycontent" id="menu1">
+	<ion-content>
+		<ion-list>
+			<button ion-item (click)="gotoPage(rootPage)">Home</button>
+			<button ion-item (click)="gotoPage(contactPage)">About</button>
+			<button ion-item (click)="gotoPage(whiteScreenPage)">Replicate White Screen Issue</button>
+		</ion-list>
+	</ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
