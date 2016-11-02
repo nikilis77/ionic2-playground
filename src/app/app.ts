@@ -22,7 +22,7 @@ export class MyApp implements OnInit{
 	}
 
 	gotoPage(page: any) {
-		this.nav.setRoot(page);
+		this.nav.setRoot(page, null, { animate: true, direction: "forward" });
 	}
 }
 

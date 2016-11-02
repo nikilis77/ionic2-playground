@@ -20,7 +20,9 @@ import { MyApp } from "./app";
 		WhiteScreenPage
 	],
 	imports: [
-		IonicModule.forRoot(MyApp, null, deepLinkConfig)
+		IonicModule.forRoot(MyApp, {
+			pageTransition: "md-transition"
+		}, deepLinkConfig)
 	],
 	bootstrap: [
 		IonicApp
